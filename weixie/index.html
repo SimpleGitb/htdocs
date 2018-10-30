@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+		<title>威胁报表</title>
+		<style type="text/css">
+			table{
+				word-break: break-word;
+				table-layout:fixed;
+				width: 100%;
+			}
+			table td,th{
+				border: 1px solid RGB(220,220,220);
+			}
+			.img_f{
+				float: left;
+				text-align: center;
+				color: #666666;
+				font-size: 14px;
+			}
+			.img_f span>span{
+				font-size: 20px;
+			}
+			.img_head{
+				width: 115px;
+				height: 115px;
+				border: 1px solid RGB(88,170,255);
+				text-align: center;
+				margin-bottom: 5px;
+			}
+			.img_head img{
+				width: 66px;
+				height: 66px;
+				margin-top: 24.5px;
+			}
+			.clear{
+				clear: both;
+			}
+			h3{
+				font-size: 16px;
+				font-family: "微软雅黑";
+			}
+			.prompt{
+				margin-top: 20px;
+			}
+			.prompt p{
+				font-weight: 400;
+			}
+			.prompt ol{
+				margin: 0;
+				font-weight: 400;
+			}
+		</style>
+	</head>
+	<body style="color: #666666;margin: 0;padding: 0;font-family: 'PingFang SC', 'Helvetica Neue', Helvetica, 'microsoft yahei', arial, STHeiTi, sans-serif;font-style: normal;font-family: '微软雅黑';font-size: 12px;font-weight: 550;background: RGB(242,242,242);">
+		<div style="width: 790px;background: white;margin: 20px auto;padding-bottom: 20px;">
+			<div class="header" style="background: url(img/53534.png) no-repeat;height: 196px">
+				<p style="font-family: '微软雅黑';color: black;text-align: left;font-weight: 400;padding-top: 18px;padding-left: 30px;">云悉互联网安全监测平台</p>
+				<h2 style="margin: auto;text-align: center;padding-top: 25px;font-weight: 700;color: #666666;font-size: 28px;font-style: normal;">云悉互联网安全检测报告</h2>
+			</div>
+			<div class="main">
+				<div style="width: 80%;margin: 0 auto;">
+					<div class="img_f" style="margin-right: 53px;">
+						<div class="img_head">
+							<img src="img/u9856.png"/>
+						</div>
+						<span>站点数 <span style="color: RGB(88,170,255);">20</span></span>
+					</div>
+					<div class="img_f" style="margin-right: 53px;">
+						<div class="img_head">
+							<img src="img/u9861.png"/>
+						</div>
+						<span>威胁事件  <span style="color: red;">2</span>  起</span>
+					</div>
+					<div class="img_f" style="margin-right: 53px;">
+						<div class="img_head">
+							<img src="img/u9851.png"/>
+						</div>
+						<span>资产事件  <span style="color: red;">3</span> 起</span>
+					</div>
+					<div class="img_f">
+						<div class="img_head">
+							<img src="img/u9866.png"/>
+						</div>
+						<span>可用性事件  <span style="color: RGB(88,170,255);">0</span></span>
+					</div>
+					
+					<div class="clear"></div>
+					<h3 style="margin-bottom: 20px;margin-top: 20px;">应用列表总览:</h3>
+					<table style="border: 1px solid RGB(220,220,220);color: #666666;font-weight: 400;" frame="border" cellpadding="5" cellspacing="0" align="center" rules="all">
+					    <tr align="center" style="background: RGB(64,158,255);color: white;">
+					        <th>名称</th>
+					        <th>url</th>
+					        <th>首页监测次数</th>
+					        <th>图片监测次数</th>
+					        <th>劫持监测次数</th>
+					        <th>深度监测次数</th>
+					        <th>域名监测次数</th>
+					    </tr>
+					    <tr align="center">
+					        <td>安徽工商业联合会</td>
+					        <td>http://press.ustc.edu.cn</td>
+					        <td>5</td>
+					        <td>690</td>
+					        <td>0</td>
+					        <td>69</td>
+					        <td>852</td>
+					    </tr>
+					    <tr align="center">
+					        <td>安徽工商业联合会</td>
+					        <td>http://press.ustc.edu.cn</td>
+					        <td>5</td>
+					        <td>690</td>
+					        <td>0</td>
+					        <td>69</td>
+					        <td>852</td>
+					    </tr>
+					</table>
+					<h3 style="margin-bottom: 20px;margin-top: 20px;">威胁事件总览:</h3>
+					<p style="font-weight: 400;">安徽工商业联合会 <a href="" style="color: #666666;margin-left: 40px;text-decoration: none;">http://press.ustc.edu.cn</a></p>
+					<div id="main" style="width: 600px;height:300px;"></div>
+					
+					<table style="border: 1px solid RGB(220,220,220);color: #666666;font-weight: 400;" frame="border" cellpadding="5" cellspacing="0" align="center" rules="all">
+					    <tr align="center" style="background: RGB(64,158,255);color: white;">
+					        <th>劫持事件</th>
+					        <th>敏感词事件</th>
+					        <th>恶意脚本事件</th>
+					        <th>敏感链接事件</th>
+					        <th>资产事件</th>
+					        <th>可用性事件</th>
+					    </tr>
+					    <tr align="center">
+					        <td>1</td>
+					        <td>2</td>
+					        <td>0</td>
+					        <td>5</td>
+					        <td>6</td>
+					        <td>0</td>
+					    </tr>
+					    <tr align="center">
+					        <td>1</td>
+					        <td>2</td>
+					        <td>0</td>
+					        <td>5</td>
+					        <td>6</td>
+					        <td>0</td>
+					    </tr>
+					</table>
+					<h3 style="margin-bottom: 20px;margin-top: 20px;">威胁事件明细:</h3>
+					<p style="font-weight: 400;">安徽工商业联合会 <a href="" style="color: #666666;margin-left: 40px;text-decoration: none;">http://press.ustc.edu.cn</a></p>
+					<table style="border: 1px solid RGB(220,220,220);color: #666666;font-weight: 400;word-break: break-word;" frame="border" cellpadding="5" cellspacing="0" align="center" rules="all">
+					    <tr align="center" style="background: RGB(64,158,255);color: white;">
+					        <th>链接</th>
+					        <th>关键词</th>
+					        <th>事件类型</th>
+					        <th>时间</th>
+					        <th>快照</th>
+					        <th>附件</th>
+					    </tr>
+					    <tr align="center">
+					        <td>http://press.ustc.edu.cn</td>
+					        <td>2</td>
+					        <td></td>
+					        <td>2018-3-20</td>
+					        <td>事件类型</td>
+					        <td>附件1</td>
+					    </tr>
+					    <tr align="center">
+					        <td>http://press.ustc.edu.cn</td>
+					        <td>2</td>
+					        <td>暗链</td>
+					        <td>2018-3-20</td>
+					        <td>0</td>
+					        <td>附件2</td>
+					    </tr>
+					</table>
+					<h3 style="margin-bottom: 20px;margin-top: 20px;">资产事件明细:</h3>
+					<p style="font-weight: 400;">安徽工商业联合会 <a href="" style="color: #666666;margin-left: 40px;text-decoration: none;">http://press.ustc.edu.cn</a></p>
+					<table style="border: 1px solid RGB(220,220,220);color: #666666;font-weight: 400;width: 100%;" frame="border" cellpadding="10" cellspacing="0" align="center" rules="all">
+					    <tr align="center" style="background: RGB(64,158,255);color: white;">
+					        <th>说明</th>
+					        <th>时间</th>
+					    </tr>
+					    <tr align="center">
+					        <td>网站dns由xxx变成yyy</td>
+					        <td>2018-6-20 20：21</td>
+					    </tr>
+					</table>
+					<h3 style="margin-bottom: 20px;margin-top: 20px;">可用性事件明细:</h3>
+					<p style="font-weight: 400;">安徽工商业联合会 <a href="" style="color: #666666;margin-left: 40px;text-decoration: none;">http://press.ustc.edu.cn</a></p>
+					<table style="border: 1px solid RGB(220,220,220);color: #666666;font-weight: 400;width: 100%;" frame="border" cellpadding="10" cellspacing="0" align="center" rules="all">
+					    <tr align="center" style="background: RGB(64,158,255);color: white;">
+					        <th>说明</th>
+					        <th>时间</th>
+					    </tr>
+					    <tr align="center">
+					        <td>华南3节点监测到 服务器延迟 500ms（阈值100ms），持续40分钟</td>
+					        <td>2018-6-20 20：21</td>
+					    </tr>
+					</table>
+					<h3 style="margin-bottom: 20px;margin-top: 20px;">可用性报表:</h3>
+					<p style="font-weight: 400;">安徽工商业联合会 <a href="" style="color: #666666;margin-left: 40px;text-decoration: none;">http://press.ustc.edu.cn</a></p>
+					<div id="main2" style="width: 600px;height:300px;"></div>
+					<div class="charts"></div>
+					<div class="prompt">
+						<p style="font-weight: 550;">联系方式：</p>
+						<p style="text-indent: 2em;">若您对该事件有任何疑问，或在应急处理过程中有任何技术问题，可以联系以下技术人员：</p>
+						<ol>
+							<li>刘渠永 13295512120 liuqy@ahsss.com.cn</li>
+							<li>吴锐 15856909013 wur@ahsss.com.cn</li>
+						</ol>
+					</div>
+					<footer style="text-align: right;margin: 40px 0 20px 0;font-size: 16px;font-weight: 400;">云悉互联网安全监测平台</footer>
+				</div>
+			</div>
+		</div>
+		
+		<script src="js/echarts.common.min.js"></script>
+		<script src="js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript">
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        option = {
+	    tooltip : {
+	        trigger: 'item',
+	        formatter: "{a} <br/>{b} : {c} ({d}%)"
+	    },
+	    legend: {
+	        orient: 'vertical',
+	        left: 'right',
+	        data: ['劫持事件','敏感词事件','恶意脚本事件','敏感链接事件','资产事件','可用性事件']
+	    },
+	    animation: false,
+	    series : [
+	        {
+	            name: '访问来源',
+	            type: 'pie',
+	            radius : '55%',
+	            center: ['40%', '45%'],
+	            label: {
+	                normal: {
+	                    show: true,
+	                    formatter: '{b} {d}%',//模板变量有 {a}、{b}、{c}、{d}，分别表示系列名，数据名，数据值，百分比。{d}数据会根据value值计算百分比
+	                },
+	            },
+	            data:[
+	                {value:335, name:'劫持事件'},
+	                {value:310, name:'敏感词事件'},
+	                {value:234, name:'恶意脚本事件'},
+	                {value:234, name:'敏感链接事件'},
+	                {value:135, name:'资产事件'},
+	                {value:1548, name:'可用性事件'}
+	            ],
+	            itemStyle: {
+	                emphasis: {
+	                    shadowBlur: 10,
+	                    shadowOffsetX: 0,
+	                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+	                }
+	            }
+	        }
+	    ]
+	};
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+        
+        
+		var myChart2 = echarts.init(document.getElementById('main2'));
+        myChart2.setOption({
+		    tooltip: {
+		        trigger: 'axis'
+		    },
+		    legend: {
+		    	x: 'right',
+		        data:['服务器延时','网站延时']
+		    },
+		    grid: {
+		        left: '3%',
+		        right: '4%',
+		        bottom: '3%',
+		        containLabel: true
+		    },
+		    xAxis: {
+		        type: 'category',
+		        boundaryGap: false,
+		        data: ["",'2018-8-15','2018-8-16','2018-8-17','2018-8-18','2018-8-19','']
+		    },
+		    yAxis: {
+		        type: 'value'
+		    },
+	        animation: false,
+		    series: [
+		        {
+		            name:'服务器延时',
+		            type:'line',
+		            stack: '总量',
+		            data:[['2018-8-15',50], ['2018-8-16',152], ['2018-8-17',171], ['2018-8-18',224], ['2018-8-19',210]]
+		        },
+		        {
+		            name:'网站延时',
+		            type:'line',
+		            stack: '总量',
+		            data:[['2018-8-15',20], ['2018-8-16',182], ['2018-8-17',191], ['2018-8-18',234], ['2018-8-19',290]]
+		        }
+		    ]
+		});
+		
+		// 异步加载数据
+		$.get('data.json').done(function (data) {
+		    // 填入数据
+		    myChart.setOption({
+		        xAxis: {
+		            data: data.categories
+		        },
+		        series: [{
+		            // 根据名字对应到相应的系列
+		            name: '销量',
+		            data: data.data
+		        }]
+		    });
+		});
+		
+		var histy;
+		 $.ajax({
+	        type: 'get',
+	        url: 'http://monitor.yunsee.vuln.cn/site/threat/export?id='+'[885,256,512,768,1280,5352,5138,131,135,134]',
+	        dataType: 'json',
+	        success: function (data) {
+	            histy = data.history;
+	            console.log(histy);
+	            if(histy){
+	            	$(".charts").empty();
+					var chart = "";
+					var i=0;
+					var categories=[];
+					for(var key in histy){
+						chart += "<div id='chart"+i+"' class='chart' style='width: 600px;height:300px;'></div>"; 
+						i++;
+		            }
+					$(".charts").append(chart);
+					var j = 0;
+					for(var key in histy){
+						var categories=[];
+						var fw_data=[];
+						var wz_data=[];
+		            	histy[key].forEach(function(key){
+		            		categories.push(key.time_date);
+		            		fw_data.push(key.server_delay);
+		            		wz_data.push(key.site_delay);
+		            	});
+		            	var chart = document.getElementById('chart'+j);  
+		            	j++;
+		                var echart = echarts.init(chart);  
+		                echart.setOption({
+						    tooltip: {
+						        trigger: 'axis'
+						    },
+						    legend: {
+						    	x: 'right',
+						        data:['服务器延时','网站延时']
+						    },
+						    grid: {
+						        left: '3%',
+						        right: '4%',
+						        bottom: '3%',
+						        containLabel: true
+						    },
+						    xAxis: {
+						        type: 'category',
+						        boundaryGap: false,
+						        data: categories
+						    },
+						    yAxis: {
+						        type: 'value'
+						    },
+					        animation: false,
+						    series: [
+						        {
+						            name:'服务器延时',
+						            type:'line',
+						            stack: '总量',
+						            data:fw_data
+						        },
+						        {
+						            name:'网站延时',
+						            type:'line',
+						            stack: '总量',
+						            data:wz_data
+						        }
+						    ]
+						});
+					}
+	            }else{
+	            	console.log("无数据");
+	            }
+	        },
+	        error: function () {
+	        }
+	    });
+    </script>
+	</body>
+</html>
